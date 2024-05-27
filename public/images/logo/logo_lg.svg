@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 444.4 87.12">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-2 {
+        letter-spacing: 0em;
+      }
+
+      .cls-3 {
+        letter-spacing: 0em;
+      }
+
+      .cls-4 {
+        fill: #b8926b;
+        font-family: Cinzel-Regular, Cinzel;
+        font-size: 80px;
+      }
+    </style>
+  </defs>
+  <g id="menu_4_u" data-name="menu 4 u">
+    <g id="lg">
+      <text class="cls-4" transform="translate(0 68)"><tspan x="0" y="0">menu4</tspan><tspan class="cls-1" x="278.88" y="0">y</tspan><tspan class="cls-2" x="327.28" y="0">o</tspan><tspan class="cls-3" x="388.4" y="0">u</tspan></text>
+    </g>
+  </g>
+</svg>
