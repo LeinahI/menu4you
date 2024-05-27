@@ -28,3 +28,15 @@ body {
     text-wrap: balance;
   }
 }
+
+.text-primary{
+  color: #b8926b !important;
+}
+
+.text-secondary{
+  color: #B63D0E !important;
+}
+
+.text-dark{
+  color: #2D2D2B !important;
+}

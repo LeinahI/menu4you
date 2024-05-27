@@ -2,12 +2,12 @@ import React, { useEffect, useState, forwardRef } from "react";
 import { useMediaQuery } from "react-responsive";
 
 import Image from "next/image";
-import { Cinzel_Decorative } from "next/font/google";
 import SpanishLatte from "../../public/images/cofees/spanish_latte_2.png";
 import { SiBuymeacoffee } from "react-icons/si";
 
 import { motion } from "framer-motion";
 
+import { Cinzel_Decorative } from "next/font/google";
 const cinzel_dec = Cinzel_Decorative({
   subsets: ["latin"],
   weight: ["400", "700", "900"],
@@ -36,11 +36,6 @@ const Hero = forwardRef((props, ref) => {
     }
   }, [twoxlAndXl, large, medium, small]);
 
-  /* Discover a world of rich flavors and handcrafted beverages at Menu 4
-          You. Whether you're looking for a classic espresso, a refreshing iced
-          latte, or a sweet treat to complement your drink, we've got something
-          to satisfy every craving.
-           */
   return (
     <>
       <motion.div
@@ -52,7 +47,7 @@ const Hero = forwardRef((props, ref) => {
         <div className="hero-content" ref={ref}>
           <div>
             <p
-              className={`select-none text-center 2xs:text-3xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-[#B63D0E] ${cinzel_dec.className} font-bold`}
+              className={`select-none text-center 2xs:text-3xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-primary ${cinzel_dec.className} font-bold`}
             >
               Your Perfect Brew Awaits
             </p>
@@ -78,7 +73,7 @@ const Hero = forwardRef((props, ref) => {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }}
           direction="right"
-          className="text-[#e7845d] bg-[#EAE6DE] rotate-6 select-none absolute 2xs:h-7 2xs:text-xl 2xs:bottom-7 xs:h-8  xs:text-2xl xs:bottom-12 sm:h-10 sm:text-4xl sm:bottom-14 md:h-12 md:text-5xl md:bottom-20 lg:h-16 lg:text-6xl lg:bottom-20 lg:pt-1 xl:h-20 xl:text-7xl xl:bottom-24"
+          className="text-primary bg-[#EAE6DE] rotate-6 select-none absolute 2xs:h-7 2xs:text-xl 2xs:bottom-7 xs:h-8  xs:text-2xl xs:bottom-12 sm:h-10 sm:text-4xl sm:bottom-14 md:h-12 md:text-5xl md:bottom-20 lg:h-16 lg:text-6xl lg:bottom-20 lg:pt-1 xl:h-20 xl:text-7xl xl:bottom-24"
         >
           <span className="mr-5">Mazagran</span>
           <span className="mr-5 ">
@@ -96,7 +91,7 @@ const Hero = forwardRef((props, ref) => {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }}
           direction="left"
-          className="text-[#e7845d] -z-10 -rotate-6 select-none absolute 2xs:h-7 2xs:text-xl 2xs:bottom-7 xs:h-8  xs:text-2xl xs:bottom-12 sm:h-10 sm:text-4xl sm:bottom-14 md:h-12 md:text-5xl md:bottom-20 lg:h-16 lg:text-6xl lg:bottom-20 lg:pt-1 xl:h-20 xl:text-7xl xl:bottom-24"
+          className="text-primary -z-10 -rotate-6 select-none absolute 2xs:h-7 2xs:text-xl 2xs:bottom-7 xs:h-8  xs:text-2xl xs:bottom-12 sm:h-10 sm:text-4xl sm:bottom-14 md:h-12 md:text-5xl md:bottom-20 lg:h-16 lg:text-6xl lg:bottom-20 lg:pt-1 xl:h-20 xl:text-7xl xl:bottom-24"
         >
           <span className="mr-5">Spanish Latte</span>
           <span className="mr-5 ">
@@ -110,18 +105,18 @@ const Hero = forwardRef((props, ref) => {
         </motion.marquee>
       </div>
       <motion.div
-        initial={{ y: 100, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1 }}
         class="grid grid-cols-12"
       >
-        <div class="2xs:col-span-12 sm:col-span-6 sm:col-end-13 lg:col-span-6 lg:col-end-13 xl:col-span-4 xl:col-end-13 card bg-base-100">
-          <div class="card-body 2xs:text-xs md:text-base">
-            <p className="text-[#2D2D2B] text-right">
-              Come in and see where every cup is a masterpiece of flavor.
-              Enjoy our meticulously crafted coffees, from bold richness to
-              velvety smoothness, complemented by delectable sweet offerings.
-              Experience perfection in every sip.
+        <div class="2xs:col-span-12 sm:col-span-6 sm:col-end-13 lg:col-span-4 lg:col-end-13 xl:col-span-4 xl:col-end-13 card bg-base-100">
+          <div class="card-body 2xs:text-xs md:text-base lg:absolute lg:bottom-44 xl:bottom-64">
+            <p className="text-dark text-right ">
+              Come in and see where every cup is a masterpiece of flavor. Enjoy
+              our meticulously crafted coffees, from bold richness to velvety
+              smoothness, complemented by delectable sweet offerings. Experience
+              perfection in every sip.
             </p>
           </div>
         </div>

@@ -25,7 +25,6 @@ export default function Home() {
       <Navbar
         onclickAbout={() => scrollToSection(about)}
         onclickHero={() => scrollToSection(hero)}
-       
       />
       <Hero ref={hero} />
       <About ref={about} />
