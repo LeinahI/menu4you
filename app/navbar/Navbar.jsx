@@ -8,7 +8,7 @@ import logosm from "/public/images/logo/logo_sm.svg";
 
 import Image from "next/image";
 
-export default function Navbar({ onclickAbout, onclickHero }) {
+export default function Navbar({ onclickAbout, onclickHero, onclickMenu }) {
   const twoxlAndXl = useMediaQuery({ minWidth: 1200 });
   const large = useMediaQuery({ minWidth: 768 });
   const medium = useMediaQuery({ minWidth: 480 });
@@ -44,14 +44,14 @@ export default function Navbar({ onclickAbout, onclickHero }) {
     }
   }, [twoxlAndXl, large, medium, small]);
   return (
-    <div className="navbar sticky top-0 z-10 bg-[#EAE6DE] sticky-navbar">
+    <div className="navbar sticky top-0 z-10 bg-main sticky-navbar">
       <div className="navbar-center mx-auto">
         <div class="flex-auto">
           <ul class="menu">
             <li>
               <a
                 onClick={() => onclickAbout()}
-                className="btn btn-ghost text-[#2D2D2B] text-xl"
+                className="btn btn-ghost text-primary text-xl"
               >
                 About
               </a>
@@ -64,7 +64,10 @@ export default function Navbar({ onclickAbout, onclickHero }) {
         <div class="flex-auto">
           <ul class="menu">
             <li>
-              <a href="#" className="btn btn-ghost text-[#2D2D2B] text-xl">
+              <a
+                onClick={() => onclickMenu()}
+                className="btn btn-ghost text-primary text-xl"
+              >
                 Menu
               </a>
             </li>

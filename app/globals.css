@@ -40,3 +40,7 @@ body {
 .text-dark{
   color: #2D2D2B !important;
 }
+
+.bg-main{
+  background-color: #EAE6DE !important;
+}

@@ -1,13 +1,15 @@
 "use client";
+import { useRef } from "react";
 
 import Navbar from "./navbar/Navbar";
 import Hero from "./hero/Hero";
 import About from "./about/About";
-import { useRef } from "react";
+import Menu from "./menu/Menu";
 
 export default function Home() {
-  const about = useRef(null);
   const hero = useRef(null);
+  const about = useRef(null);
+  const menu = useRef(null);
 
   const scrollToSection = (elementRef) => {
     const navbarHeight = document.querySelector(".sticky-navbar").offsetHeight;
@@ -25,9 +27,12 @@ export default function Home() {
       <Navbar
         onclickAbout={() => scrollToSection(about)}
         onclickHero={() => scrollToSection(hero)}
+        onclickMenu={() => scrollToSection(menu)}
       />
       <Hero ref={hero} />
       <About ref={about} />
+      <Menu ref={menu} />
+      
     </main>
   );
 }

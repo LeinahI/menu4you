@@ -1,11 +1,9 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Colors
- B7926A
- 2D2D2B
- EFE1CA
- B0B0B0
- EAE6DE
+## Menu
+- Hot Beverages
+- Cold Beverages
+- Sweet Pastries
 
 ## Getting Started
 
