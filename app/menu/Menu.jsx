@@ -9,7 +9,7 @@ const cinzel_dec = Cinzel_Decorative({
 const Menu = forwardRef((props, ref) => {
   return (
     <>
-      <section ref={ref} className="grid grid-cols-12 mt-20">
+      <section ref={ref} className="grid grid-cols-12 mt-20 ">
         <div className="col-span-12 text-right">
           <motion.p
             initial={{ y: 100, opacity: 0 }}
@@ -20,40 +20,22 @@ const Menu = forwardRef((props, ref) => {
             Menu
           </motion.p>
         </div>
+        <div className="col-span-12 mt-20 mb-20 px-20">
+          <div class="flex flex-col w-full text-primary">
+            <div class="grid pb-5 text-5xl place-items-center border-b-2 border-[#b8926b]">
+              Hot Beverages
+            </div>
+            <div class="divider"></div>
+            <div class="grid pb-5 text-5xl place-items-center border-b-2 border-[#b8926b]">
+              Cold Beverages
+            </div>
+            <div class="divider"></div>
+            <div class="grid  text-5xl place-items-center">
+              Sweet Pastries
+            </div>
+          </div>
+        </div>
       </section>
-      <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
     </>
   );
 });
