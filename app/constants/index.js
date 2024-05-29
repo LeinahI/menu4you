@@ -8,7 +8,7 @@ export const MenuList = [
     inity: -100,
     init: -175,
     animate: -225,
-    rotate: 6,
+    rotate: -6,
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ export const MenuList = [
     inity: -100,
     init: 350,
     animate: 425,
-    rotate: -6,
+    rotate: 6,
   },
   {
     id: 3,
@@ -30,6 +30,6 @@ export const MenuList = [
     inity: -100,
     init: -175,
     animate: -245,
-    rotate: 6,
+    rotate: -6,
   },
 ];
