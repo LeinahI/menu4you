@@ -31,32 +31,32 @@ const Menu = forwardRef((props, ref) => {
     if (twoxlAndXl) {
       /* Animation */
       setInitY({ 1: -100, 2: -100, 3: -115 });
-      setInitX({ 1: -290, 2: 400, 3: -200 });
-      setAnimateX({ 1: -315, 2: 425, 3: -225 });
+      setInitX({ 1: -325, 2: 400, 3: -200 });
+      setAnimateX({ 1: -350, 2: 425, 3: -225 });
       /* Images */
       setHeightImage({ 1: 300, 2: 200, 3: 300 });
       setWidthImage({ 1: 300, 2: 200, 3: 300 });
     } else if (large) {
       /* Animation */
       setInitY({ 1: -100, 2: -100, 3: -100 });
-      setInitX({ 1: -175, 2: 400, 3: -175 });
-      setAnimateX({ 1: -225, 2: 425, 3: -225 });
+      setInitX({ 1: -225, 2: 400, 3: -175 });
+      setAnimateX({ 1: -250, 2: 425, 3: -225 });
       /* Images */
       setHeightImage({ 1: 200, 2: 150, 3: 200 });
       setWidthImage({ 1: 200, 2: 150, 3: 200 });
     } else if (medium) {
       /* Animation */
       setInitY({ 1: -100, 2: -100, 3: -75 });
-      setInitX({ 1: -190, 2: 300, 3: -150 });
-      setAnimateX({ 1: -215, 2: 325, 3: -175 });
+      setInitX({ 1: -210, 2: 300, 3: -150 });
+      setAnimateX({ 1: -235, 2: 325, 3: -175 });
       /* Images */
       setHeightImage({ 1: 200, 2: 150, 3: 175 });
       setWidthImage({ 1: 200, 2: 150, 3: 175 });
     } else if (small) {
       /* Animation */
       setInitY({ 1: -50, 2: -50, 3: -50 });
-      setInitX({ 1: -135, 2: 250, 3: -95 });
-      setAnimateX({ 1: -160, 2: 260, 3: -115 });
+      setInitX({ 1: -150, 2: 250, 3: -95 });
+      setAnimateX({ 1: -175, 2: 260, 3: -115 });
       /* Images */
       setHeightImage({ 1: 150, 2: 115, 3: 100 });
       setWidthImage({ 1: 150, 2: 115, 3: 100 });
