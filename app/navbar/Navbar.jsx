@@ -46,33 +46,29 @@ export default function Navbar({ onclickAbout, onclickHero, onclickMenu }) {
   return (
     <div className="navbar sticky top-0 z-10 bg-main sticky-navbar">
       <div className="navbar-center mx-auto">
-        <div class="flex-auto">
-          <ul class="menu">
-            <li>
-              <a
-                onClick={() => onclickAbout()}
-                className="btn btn-ghost text-primary text-xl"
-              >
-                About
-              </a>
-            </li>
-          </ul>
-        </div>
-        <a onClick={() => onclickHero()} className="btn btn-ghost">
-          <Image className={`${height} w-auto`} alt="Logo" src={image} />
-        </a>
-        <div class="flex-auto">
-          <ul class="menu">
-            <li>
-              <a
-                onClick={() => onclickMenu()}
-                className="btn btn-ghost text-primary text-xl"
-              >
-                Menu
-              </a>
-            </li>
-          </ul>
-        </div>
+        <ul className="menu menu-horizontal px-1">
+          <li>
+            <a
+              onClick={() => onclickAbout()}
+              className="btn btn-ghost text-primary text-xl"
+            >
+              About
+            </a>
+          </li>
+          <li>
+            <a onClick={() => onclickHero()} className="btn btn-ghost">
+              <Image className={`${height} w-auto`} alt="Logo" src={image} />
+            </a>
+          </li>
+          <li>
+            <a
+              onClick={() => onclickMenu()}
+              className="btn btn-ghost text-primary text-xl"
+            >
+              Menu
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   );

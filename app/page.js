@@ -23,7 +23,7 @@ export default function Home() {
   };
 
   return (
-    <main className="overflow-hidden h-100 container mx-auto border-l-0 border-r-0 md:border-l-2 md:border-r-2 border-[#B7926A] ">
+    <main className="h-100 container mx-auto border-l-0 border-r-0 md:border-l-2 md:border-r-2 border-[#B7926A] ">
       <Navbar
         onclickAbout={() => scrollToSection(about)}
         onclickHero={() => scrollToSection(hero)}

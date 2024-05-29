@@ -2,8 +2,8 @@ import React, { useEffect, useState, forwardRef } from "react";
 import { useMediaQuery } from "react-responsive";
 
 import Image from "next/image";
-import SpanishLatte from "../../public/images/cofees/spanish_latte.png";
-import Circle from "../../public/images/cofees/dark_circle.png";
+import SpanishLatte from "../../public/images/coffees/spanish_latte.png";
+import Circle from "../../public/images/coffees/dark_circle.png";
 import { SiBuymeacoffee } from "react-icons/si";
 
 import { motion } from "framer-motion";
@@ -68,7 +68,7 @@ const Hero = forwardRef((props, ref) => {
         </div>
       </motion.div>
       {/* Hero Image & Marquee */}
-      <div className="mx-auto 2xs:-mt-7 md:-mt-8 lg:-mt-9 xl:-mt-10 relative">
+      <div className="mx-auto 2xs:-mt-7 md:-mt-8 lg:-mt-9 xl:-mt-10 relative overflow-hidden">
         <motion.div
           initial={{ y: -100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}

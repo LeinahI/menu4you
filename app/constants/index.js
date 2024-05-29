@@ -1,0 +1,32 @@
+export const MenuList = [
+  {
+    id: 1,
+    title: "Hot Beverages",
+    image: "/images/coffees/hot_beverages/Matcha_Latte.jpg",
+    height: 200,
+    width: 200,
+    init: -275,
+    animate: -325,
+    rotate: 6,
+  },
+  {
+    id: 2,
+    title: "Cold Beverages",
+    image: "/images/coffees/cold_beverages/watermelon_lemonade.webp",
+    height: 150,
+    width: 150,
+    init: 350,
+    animate: 425,
+    rotate: -6,
+  },
+  {
+    id: 3,
+    title: "Sweet Pastries",
+    image: "/images/coffees/hot_beverages/Matcha_Latte.jpg",
+    height: 200,
+    width: 200,
+    init: -175,
+    animate: -245,
+    rotate: 6,
+  },
+];
