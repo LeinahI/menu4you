@@ -13,7 +13,7 @@ export const MenuList = [
   {
     id: 2,
     title: "Cold Beverages",
-    image: "/images/coffees/cold_beverages/watermelon_lemonade.webp",
+    image: "/images/coffees/cold_beverages/Hibiscus_Lemon_Iced_Tea.jpg",
     height: 150,
     width: 150,
     inity: -100,
@@ -23,8 +23,8 @@ export const MenuList = [
   },
   {
     id: 3,
-    title: "Sweet Pastries",
-    image: "/images/coffees/sweet_pastries/Rhubarb_tartlets.jpg",
+    title: "Pastries",
+    image: "/images/coffees/sweet_pastries/Classic_Paris_Brest.jpg",
     height: 200,
     width: 200,
     inity: -100,

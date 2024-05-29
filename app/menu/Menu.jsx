@@ -24,15 +24,18 @@ const Menu = forwardRef((props, ref) => {
   const [heiggtImage, setHeightImage] = useState({});
   const [widthImage, setWidthImage] = useState({});
 
-  useEffect(() => {
+  /* If Menu List is hovered */
+  const [isHovered, setIsHovered] = useState(false);
+
+  useEffect(() => { 
     if (twoxlAndXl) {
       /* Animation */
-      setInitY({ 1: -100, 2: -100, 3: -100 });
-      setInitX({ 1: -200, 2: 400, 3: -200 });
-      setAnimateX({ 1: -225, 2: 425, 3: -225 });
+      setInitY({ 1: -100, 2: -100, 3: -115 });
+      setInitX({ 1: -290, 2: 400, 3: -200 });
+      setAnimateX({ 1: -315, 2: 425, 3: -225 });
       /* Images */
-      setHeightImage({ 1: 200, 2: 150, 3: 200 });
-      setWidthImage({ 1: 200, 2: 150, 3: 200 });
+      setHeightImage({ 1: 300, 2: 200, 3: 300 });
+      setWidthImage({ 1: 300, 2: 200, 3: 300 });
     } else if (large) {
       /* Animation */
       setInitY({ 1: -100, 2: -100, 3: -100 });
@@ -43,27 +46,27 @@ const Menu = forwardRef((props, ref) => {
       setWidthImage({ 1: 200, 2: 150, 3: 200 });
     } else if (medium) {
       /* Animation */
-      setInitY({ 1: -100, 2: -100, 3: -100 });
-      setInitX({ 1: -190, 2: 300, 3: -175 });
-      setAnimateX({ 1: -215, 2: 325, 3: -200 });
+      setInitY({ 1: -100, 2: -100, 3: -75 });
+      setInitX({ 1: -190, 2: 300, 3: -150 });
+      setAnimateX({ 1: -215, 2: 325, 3: -175 });
       /* Images */
       setHeightImage({ 1: 200, 2: 150, 3: 175 });
       setWidthImage({ 1: 200, 2: 150, 3: 175 });
     } else if (small) {
       /* Animation */
       setInitY({ 1: -50, 2: -50, 3: -50 });
-      setInitX({ 1: -135, 2: 250, 3: -135 });
-      setAnimateX({ 1: -160, 2: 260, 3: -160 });
+      setInitX({ 1: -135, 2: 250, 3: -95 });
+      setAnimateX({ 1: -160, 2: 260, 3: -115 });
       /* Images */
-      setHeightImage({ 1: 150, 2: 115, 3: 150 });
-      setWidthImage({ 1: 150, 2: 115, 3: 150 });
+      setHeightImage({ 1: 150, 2: 115, 3: 100 });
+      setWidthImage({ 1: 150, 2: 115, 3: 100 });
     } else if (xs) {
-      setInitY({ 1: -50, 2: -50, 3: -50 });
-      setInitX({ 1: -90, 2: 150, 3: -90 });
-      setAnimateX({ 1: -115, 2: 175, 3: -115 });
+      setInitY({ 1: -50, 2: -50, 3: -30 });
+      setInitX({ 1: -90, 2: 150, 3: -75 });
+      setAnimateX({ 1: -115, 2: 175, 3: -100 });
       /* Images */
-      setHeightImage({ 1: 100, 2: 75, 3: 100 });
-      setWidthImage({ 1: 100, 2: 75, 3: 100 });
+      setHeightImage({ 1: 100, 2: 75, 3: 80 });
+      setWidthImage({ 1: 100, 2: 75, 3: 80 });
     } else {
       setInitY({ 1: -50, 2: -50, 3: -50 });
       setInitX({ 1: -100, 2: 200, 3: -150 });
@@ -71,7 +74,7 @@ const Menu = forwardRef((props, ref) => {
     }
   }, [twoxlAndXl, large, medium, small, xs]);
 
-  const [isHovered, setIsHovered] = useState(false);
+  
 
   return (
     <>
