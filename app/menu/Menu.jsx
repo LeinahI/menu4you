@@ -9,7 +9,7 @@ const cinzel_dec = Cinzel_Decorative({
 const Menu = forwardRef((props, ref) => {
   return (
     <>
-      <section ref={ref} className="grid grid-cols-12 mt-20 ">
+      <section ref={ref} className="grid grid-cols-12 my-20">
         <div className="col-span-12 text-right">
           <motion.p
             initial={{ y: 100, opacity: 0 }}
@@ -20,17 +20,17 @@ const Menu = forwardRef((props, ref) => {
             Menu
           </motion.p>
         </div>
-        <div className="col-span-12 mt-20 mb-20 px-20">
+        <div className="col-span-12 2xs:mt-3 xs:mt-6 2xs:px-10 md:px-14">
           <div class="flex flex-col w-full text-primary">
-            <div class="grid pb-5 text-5xl place-items-center border-b-2 border-[#b8926b]">
+            <div class="grid text-center 2xs:text-lg xs:text-xl sm:text-3xl md:text-4xl lg:text-5xl place-items-center border-b">
               Hot Beverages
             </div>
-            <div class="divider"></div>
-            <div class="grid pb-5 text-5xl place-items-center border-b-2 border-[#b8926b]">
+            <hr className="border-[#b8926b] 2xs:my-0 sm:my-2 md:my-4 lg:my-8 lg:border lg:mx-20 xl:mx-44" />
+            <div class="grid text-center 2xs:text-lg xs:text-xl sm:text-3xl md:text-4xl lg:text-5xl place-items-center border-b">
               Cold Beverages
             </div>
-            <div class="divider"></div>
-            <div class="grid  text-5xl place-items-center">
+            <hr className="border-[#b8926b] 2xs:my-0 sm:my-2 md:my-5 lg:my-8 lg:border lg:mx-20 xl:mx-44" />
+            <div class="grid text-center 2xs:text-lg xs:text-xl sm:text-3xl md:text-4xl lg:text-5xl place-items-center">
               Sweet Pastries
             </div>
           </div>
