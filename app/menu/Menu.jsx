@@ -1,5 +1,6 @@
-import React, { forwardRef, useState } from "react";
+import React, { forwardRef, useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useMediaQuery } from "react-responsive";
 import { Cinzel_Decorative } from "next/font/google";
 import Image from "next/image";
 import { MenuList } from "../constants";
@@ -9,10 +10,72 @@ const cinzel_dec = Cinzel_Decorative({
 });
 
 const Menu = forwardRef((props, ref) => {
+  const twoxlAndXl = useMediaQuery({ minWidth: 1280 });
+  const large = useMediaQuery({ minWidth: 1024 });
+  const medium = useMediaQuery({ minWidth: 768 });
+  const small = useMediaQuery({ minWidth: 640 });
+  const xs = useMediaQuery({ minWidth: 450 });
+
+  /* Animation */
+  const [initY, setInitY] = useState({});
+  const [initX, setInitX] = useState({});
+  const [animateX, setAnimateX] = useState({});
+  /* Images */
+  const [heiggtImage, setHeightImage] = useState({});
+  const [widthImage, setWidthImage] = useState({});
+
+  useEffect(() => {
+    if (twoxlAndXl) {
+      /* Animation */
+      setInitY({ 1: -100, 2: -100, 3: -100 });
+      setInitX({ 1: -200, 2: 400, 3: -200 });
+      setAnimateX({ 1: -225, 2: 425, 3: -225 });
+      /* Images */
+      setHeightImage({ 1: 200, 2: 150, 3: 200 });
+      setWidthImage({ 1: 200, 2: 150, 3: 200 });
+    } else if (large) {
+      /* Animation */
+      setInitY({ 1: -100, 2: -100, 3: -100 });
+      setInitX({ 1: -175, 2: 400, 3: -175 });
+      setAnimateX({ 1: -225, 2: 425, 3: -225 });
+      /* Images */
+      setHeightImage({ 1: 200, 2: 150, 3: 200 });
+      setWidthImage({ 1: 200, 2: 150, 3: 200 });
+    } else if (medium) {
+      /* Animation */
+      setInitY({ 1: -100, 2: -100, 3: -100 });
+      setInitX({ 1: -190, 2: 300, 3: -175 });
+      setAnimateX({ 1: -215, 2: 325, 3: -200 });
+      /* Images */
+      setHeightImage({ 1: 200, 2: 150, 3: 175 });
+      setWidthImage({ 1: 200, 2: 150, 3: 175 });
+    } else if (small) {
+      /* Animation */
+      setInitY({ 1: -50, 2: -50, 3: -50 });
+      setInitX({ 1: -135, 2: 250, 3: -135 });
+      setAnimateX({ 1: -160, 2: 260, 3: -160 });
+      /* Images */
+      setHeightImage({ 1: 150, 2: 115, 3: 150 });
+      setWidthImage({ 1: 150, 2: 115, 3: 150 });
+    } else if (xs) {
+      setInitY({ 1: -50, 2: -50, 3: -50 });
+      setInitX({ 1: -90, 2: 150, 3: -90 });
+      setAnimateX({ 1: -115, 2: 175, 3: -115 });
+      /* Images */
+      setHeightImage({ 1: 100, 2: 75, 3: 100 });
+      setWidthImage({ 1: 100, 2: 75, 3: 100 });
+    } else {
+      setInitY({ 1: -50, 2: -50, 3: -50 });
+      setInitX({ 1: -100, 2: 200, 3: -150 });
+      setAnimateX({ 1: -150, 2: 250, 3: -200 });
+    }
+  }, [twoxlAndXl, large, medium, small, xs]);
+
   const [isHovered, setIsHovered] = useState(false);
+
   return (
     <>
-      <section ref={ref} className="grid grid-cols-12 mt-20">
+      <section ref={ref} className="grid grid-cols-12 mt-20 overflow-hidden">
         {/* Menu Text */}
         <div className="col-span-12 text-right">
           <motion.p
@@ -34,10 +97,11 @@ const Menu = forwardRef((props, ref) => {
           <div class="flex flex-col w-full text-primary">
             {MenuList.map((item) => (
               <div key={item.id}>
-                <div class="grid cursor-pointer text-center 2xs:text-lg xs:text-xl sm:text-3xl md:text-4xl lg:text-5xl place-items-center">
+                <div class="grid text-center 2xs:text-lg xs:text-xl sm:text-3xl md:text-4xl lg:text-5xl place-items-center">
                   <span
                     onMouseOver={() => setIsHovered(item.id)}
                     onMouseOut={() => setIsHovered(false)}
+                    className="cursor-pointer"
                   >
                     {item.title}
                     <AnimatePresence>
@@ -45,19 +109,19 @@ const Menu = forwardRef((props, ref) => {
                         <motion.div
                           initial={{
                             opacity: 0,
-                            y: -100,
-                            x: item.init,
+                            y: initY[item.id],
+                            x: initX[item.id],
                             rotate: item.rotate,
                           }}
-                          animate={{ opacity: 1, x: item.animate }}
-                          exit={{ opacity: 0, x: item.init }}
+                          animate={{ opacity: 1, x: animateX[item.id] }}
+                          exit={{ opacity: 0, x: initX[item.id] }}
                           transition={{ duration: 0.5 }}
                         >
                           <Image
                             src={item.image}
                             className="mx-auto select-none absolute"
-                            height={item.height}
-                            width={item.width}
+                            height={heiggtImage[item.id]}
+                            width={widthImage[item.id]}
                           />
                         </motion.div>
                       )}
