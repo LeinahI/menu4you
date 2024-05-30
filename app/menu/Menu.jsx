@@ -27,6 +27,14 @@ const Menu = forwardRef((props, ref) => {
 
   /* If Menu List is hovered */
   const [isHovered, setIsHovered] = useState(false);
+  const [checkedItems, setCheckedItems] = useState({});
+
+  const handleCheckboxChange = (id) => {
+    setCheckedItems((prevState) => ({
+      ...prevState,
+      [id]: !prevState[id],
+    }));
+  };
 
   useEffect(() => {
     if (xxl) {
@@ -116,9 +124,10 @@ const Menu = forwardRef((props, ref) => {
                     name="my-accordion-1"
                     onMouseOver={() => setIsHovered(item.id)}
                     onMouseOut={() => setIsHovered(false)}
-                    className="cursor-pointer w-6/12 grid place-items-start"
+                    onChange={() => handleCheckboxChange(item.id)}
+                    className="w-6/12 grid place-items-start"
                   />
-                  <span className="collapse-title ">
+                  <span className="collapse-title">
                     {item.title}
                     <AnimatePresence>
                       {isHovered === item.id && (
@@ -138,6 +147,7 @@ const Menu = forwardRef((props, ref) => {
                             className="absolute"
                             height={heiggtImage[item.id]}
                             width={widthImage[item.id]}
+                            class="-z-10"
                           />
                         </motion.div>
                       )}
@@ -145,26 +155,33 @@ const Menu = forwardRef((props, ref) => {
                   </span>
                   <div className="collapse-content w-full xl:px-44 lg:px-20">
                     <div className="grid xs:grid-cols-1 sm:grid-cols-2 gap-4">
-                      {/* Product Start */}
-                      {item.products.map((product, index) => (
-                        <div className="p-5 rounded-lg ">
-                          <Image
-                            src={product.productImage}
-                            height={400}
-                            width={400}
-                            className="aspect-square rounded object-cover"
-                          />
-                          <div className="mt-3 text-start">
-                            <h3 className="font-medium text-2xl text-primary group-hover:underline group-hover:underline-offset-4">
-                              {product.productName}
-                            </h3>
-                            <p className="mt-1 text-xl text-primary">
-                              ₱&nbsp;{product.productPrice}
-                            </p>
-                          </div>
-                        </div>
-                      ))}
-                      {/* Product End */}
+                      <AnimatePresence>
+                        {checkedItems[item.id] &&
+                          item.products.map((product, index) => (
+                            <motion.div
+                              key={index}
+                              initial={{ x: 50, opacity: 0 }}
+                              animate={{ x: 0, opacity: 1 }}
+                              transition={{ duration: 1 }}
+                              className="p-5 rounded-lg z-10"
+                            >
+                              <Image
+                                src={product.productImage}
+                                height={400}
+                                width={400}
+                                className="aspect-square rounded object-cover"
+                              />
+                              <div className="mt-3 text-start">
+                                <h3 className="font-medium text-2xl text-primary group-hover:underline group-hover:underline-offset-4">
+                                  {product.productName}
+                                </h3>
+                                <p className="mt-1 text-xl text-primary">
+                                  ₱&nbsp;{product.productPrice}
+                                </p>
+                              </div>
+                            </motion.div>
+                          ))}
+                      </AnimatePresence>
                     </div>
                   </div>
                 </div>

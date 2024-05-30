@@ -44,7 +44,7 @@ export default function Navbar({ onclickAbout, onclickHero, onclickMenu }) {
     }
   }, [twoxlAndXl, large, medium, small]);
   return (
-    <div className="navbar sticky top-0 z-10 bg-main sticky-navbar">
+    <div className="navbar sticky top-0 z-50 bg-main sticky-navbar">
       <div className="navbar-center mx-auto">
         <ul className="menu menu-horizontal px-1">
           <li>
