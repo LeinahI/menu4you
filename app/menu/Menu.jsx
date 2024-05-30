@@ -47,6 +47,10 @@ const Menu = forwardRef((props, ref) => {
   };
 
   useEffect(() => {
+    setCheckedItems({});
+  }, []);
+
+  useEffect(() => {
     if (xxl) {
       /* Animation */
       setInitY({ 1: -100, 2: -100, 3: -200 });
@@ -137,6 +141,7 @@ const Menu = forwardRef((props, ref) => {
                     onMouseOver={() => setIsHovered(item.id)}
                     onMouseOut={() => setIsHovered(false)}
                     onChange={() => handleCheckboxChange(item.id)}
+                    checked={checkedItems[item.id] || false}
                     className="w-6/12"
                   />
                   <span
