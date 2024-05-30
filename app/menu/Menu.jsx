@@ -182,15 +182,15 @@ const Menu = forwardRef((props, ref) => {
                             >
                               <Image
                                 src={product.productImage}
-                                height={400}
-                                width={400}
+                                height={486}
+                                width={486}
                                 className="aspect-square rounded object-cover"
                               />
                               <div className="mt-3 text-start">
-                                <h3 className="font-medium text-2xl text-primary">
+                                <h3 className="font-medium 2xs:text-base sm:text-xl lg:text-2xl text-primary">
                                   {product.productName}
                                 </h3>
-                                <p className="mt-1 text-xl text-primary">
+                                <p className="mt-1 2xs:text-sm sm:text-lg lg:text-xl text-primary">
                                   ₱&nbsp;{product.productPrice}
                                 </p>
                               </div>
