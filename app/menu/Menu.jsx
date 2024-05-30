@@ -142,10 +142,10 @@ const Menu = forwardRef((props, ref) => {
                     onMouseOut={() => setIsHovered(false)}
                     onChange={() => handleCheckboxChange(item.id)}
                     checked={checkedItems[item.id] || false}
-                    className="w-6/12"
+                    className="xs:w-6/12"
                   />
                   <span
-                    className="collapse-title menuText"
+                    className="collapse-title w-full 2xs:text-end xs:text-center px-4"
                     style={{ cursor: "default" }}
                   >
                     {item.title}

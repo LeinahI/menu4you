@@ -68,7 +68,7 @@ const Hero = forwardRef((props, ref) => {
         </div>
       </motion.div>
       {/* Hero Image & Marquee */}
-      <div className="mx-auto 2xs:-mt-7 md:-mt-8 lg:-mt-9 xl:-mt-10 relative overflow-hidden">
+      <div className="mx-auto 2xs:-mt-7 md:-mt-8 lg:-mt-9 xl:-mt-10 relative">
         <motion.div
           initial={{ y: -100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
