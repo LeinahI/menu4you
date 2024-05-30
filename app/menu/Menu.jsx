@@ -26,12 +26,22 @@ const Menu = forwardRef((props, ref) => {
   const [widthImage, setWidthImage] = useState({});
 
   /* If Menu List is hovered */
-  const [isHovered, setIsHovered] = useState(false);
+  const [isHovered, setIsHovered] = useState(null);
+  /* If input checkbox is checked */
   const [checkedItems, setCheckedItems] = useState({});
 
   const handleCheckboxChange = (id) => {
+    // Call the 'setCheckedItems' function to update the 'checkedItems' state.
+    // 'prevState' represents the previous state of 'checkedItems'.
     setCheckedItems((prevState) => ({
+      // Spread the previous state into a new object. This copies all existing properties
+      // from 'prevState' into the new state object.
       ...prevState,
+      // Update the property corresponding to the given 'id'.
+      // The square brackets '[]' are used to dynamically set the property name using the 'id'.
+      // The value is set to the negation of its previous value:
+      // If 'prevState[id]' was 'false', it will be set to 'true'.
+      // If 'prevState[id]' was 'true', it will be set to 'false'.
       [id]: !prevState[id],
     }));
   };
@@ -78,6 +88,7 @@ const Menu = forwardRef((props, ref) => {
       setHeightImage({ 1: 150, 2: 150, 3: 150 });
       setWidthImage({ 1: 150, 2: 150, 3: 150 });
     } else if (xs) {
+      /* Animation */
       setInitY({ 1: -50, 2: -50, 3: -75 });
       setInitX({ 1: -15, 2: 250, 3: 35 });
       setAnimateX({ 1: -35, 2: 275, 3: 15 });
@@ -85,6 +96,7 @@ const Menu = forwardRef((props, ref) => {
       setHeightImage({ 1: 100, 2: 100, 3: 100 });
       setWidthImage({ 1: 100, 2: 100, 3: 100 });
     } else {
+      /* Animation */
       setInitY({ 1: -50, 2: -50, 3: -75 });
       setInitX({ 1: -15, 2: 250, 3: 35 });
       setAnimateX({ 1: -35, 2: 275, 3: 15 });
@@ -118,16 +130,19 @@ const Menu = forwardRef((props, ref) => {
           <div class="flex flex-col w-full text-primary">
             {MenuList.map((item) => (
               <div key={item.id}>
-                <div class="collapse overflow-visible grid text-center 2xs:text-lg xs:text-xl sm:text-3xl md:text-4xl lg:text-5xl place-items-center">
+                <div className="collapse overflow-visible grid text-center 2xs:text-lg xs:text-xl sm:text-3xl md:text-4xl lg:text-5xl place-items-center">
                   <input
                     type="checkbox"
                     name="my-accordion-1"
                     onMouseOver={() => setIsHovered(item.id)}
                     onMouseOut={() => setIsHovered(false)}
                     onChange={() => handleCheckboxChange(item.id)}
-                    className="w-6/12 grid place-items-start"
+                    className="w-6/12"
                   />
-                  <span className="collapse-title">
+                  <span
+                    className="collapse-title menuText"
+                    style={{ cursor: "default" }}
+                  >
                     {item.title}
                     <AnimatePresence>
                       {isHovered === item.id && (
@@ -172,7 +187,7 @@ const Menu = forwardRef((props, ref) => {
                                 className="aspect-square rounded object-cover"
                               />
                               <div className="mt-3 text-start">
-                                <h3 className="font-medium text-2xl text-primary group-hover:underline group-hover:underline-offset-4">
+                                <h3 className="font-medium text-2xl text-primary">
                                   {product.productName}
                                 </h3>
                                 <p className="mt-1 text-xl text-primary">
