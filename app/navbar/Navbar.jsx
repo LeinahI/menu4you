@@ -9,40 +9,48 @@ import logosm from "/public/images/logo/logo_sm.svg";
 import Image from "next/image";
 
 export default function Navbar({ onclickAbout, onclickHero, onclickMenu }) {
-  const twoxlAndXl = useMediaQuery({ minWidth: 1200 });
-  const large = useMediaQuery({ minWidth: 768 });
-  const medium = useMediaQuery({ minWidth: 480 });
-  const small = useMediaQuery({ minWidth: 400 });
+  const xxl = useMediaQuery({ minWidth: 1536 });
+  const xl = useMediaQuery({ minWidth: 1280 });
+  const large = useMediaQuery({ minWidth: 1024 });
+  const medium = useMediaQuery({ minWidth: 768 });
+  const small = useMediaQuery({ minWidth: 640 });
+  const xs = useMediaQuery({ minWidth: 450 });
 
   const [image, setImage] = useState(logo2xl_xl);
   useEffect(() => {
-    if (twoxlAndXl) {
-      setImage(logo2xl_xl);
+    if (xxl) {
+      setImage(logo2xl_xl); /* xxl */
+    } else if (xl) {
+      setImage(logo2xl_xl); /* xl */
     } else if (large) {
-      setImage(logolg);
+      setImage(logolg); /* lg */
     } else if (medium) {
-      setImage(logomd);
+      setImage(logomd); /* md */
     } else if (small) {
-      setImage(logosm);
+      setImage(logosm); /* sm */
+    } else if (xs) {
+      setImage(logosm); /* xs */
     } else {
       setImage(logosm);
     }
-  }, [twoxlAndXl, large, medium, small]);
+  }, [xxl, xl, large, medium, small, xs]);
 
   const [height, setHeight] = useState("h-12");
   useEffect(() => {
-    if (twoxlAndXl) {
+    if (xxl) {
+      setHeight("h-12");
+    } else if (xl) {
       setHeight("h-12");
     } else if (large) {
-      setHeight("h-10");
+      setHeight("h-6");
     } else if (medium) {
-      setHeight("h-10");
+      setHeight("h-8");
     } else if (small) {
       setHeight("h-10");
     } else {
       setHeight("h-10");
     }
-  }, [twoxlAndXl, large, medium, small]);
+  }, [xxl, xl, large, medium, small]);
   return (
     <div className="navbar sticky top-0 z-50 bg-main sticky-navbar">
       <div className="navbar-center mx-auto">
