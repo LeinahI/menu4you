@@ -143,8 +143,29 @@ const Menu = forwardRef((props, ref) => {
                       )}
                     </AnimatePresence>
                   </span>
-                  <div className="collapse-content text-center w-full px-44">
-                    <p>hello</p>
+                  <div className="collapse-content w-full xl:px-44 lg:px-20">
+                    <div className="grid xs:grid-cols-1 sm:grid-cols-2 gap-4">
+                      {/* Product Start */}
+                      {item.products.map((product, index) => (
+                        <div className="p-5 rounded-lg ">
+                          <Image
+                            src={product.productImage}
+                            height={400}
+                            width={400}
+                            className="aspect-square rounded object-cover"
+                          />
+                          <div className="mt-3 text-start">
+                            <h3 className="font-medium text-2xl text-primary group-hover:underline group-hover:underline-offset-4">
+                              {product.productName}
+                            </h3>
+                            <p className="mt-1 text-xl text-primary">
+                              ₱&nbsp;{product.productPrice}
+                            </p>
+                          </div>
+                        </div>
+                      ))}
+                      {/* Product End */}
+                    </div>
                   </div>
                 </div>
                 <hr className="border-[#b8926b] 2xs:my-0 sm:my-2 md:my-5 lg:my-8 lg:border lg:mx-20 xl:mx-44" />
