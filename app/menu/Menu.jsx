@@ -16,6 +16,7 @@ const Menu = forwardRef((props, ref) => {
   const medium = useMediaQuery({ minWidth: 768 });
   const small = useMediaQuery({ minWidth: 640 });
   const xs = useMediaQuery({ minWidth: 450 });
+  const xxs = useMediaQuery({ minWidth: 320, maxWidth: 449 });
 
   /* Animation */
   const [initY, setInitY] = useState({});
@@ -150,7 +151,7 @@ const Menu = forwardRef((props, ref) => {
                   >
                     {item.title}
                     <AnimatePresence>
-                      {isHovered === item.id && (
+                      {isHovered === item.id && !xxs && (
                         <motion.div
                           initial={{
                             opacity: 0,
