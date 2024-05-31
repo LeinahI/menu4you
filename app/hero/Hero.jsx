@@ -74,12 +74,14 @@ const Hero = forwardRef((props, ref) => {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }}
         >
+          {/* Latte */}
           <Image
             src={SpanishLatte}
             alt="Spanish Latte"
             className="mx-auto select-none"
             height={coffeeSize}
           />
+          {/* Dark Circle */}
           <div className="flex justify-center">
             <Image
               src={Circle}
@@ -96,7 +98,7 @@ const Hero = forwardRef((props, ref) => {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }}
           direction="right"
-          className="text-primary bg-[#EAE6DE] rotate-6 select-none absolute 2xs:h-7 2xs:text-xl 2xs:bottom-7 xs:h-8  xs:text-2xl xs:bottom-12 sm:h-10 sm:text-4xl sm:bottom-14 md:h-12 md:text-5xl md:bottom-20 lg:h-16 lg:text-6xl lg:bottom-20 lg:pt-1 xl:h-20 xl:text-7xl xl:bottom-24"
+          className="text-primary bg-main select-none absolute 2xs:h-7 2xs:text-xl 2xs:bottom-7 xs:h-8  xs:text-2xl xs:bottom-12 sm:h-10 sm:text-4xl sm:bottom-14 md:h-12 md:text-5xl md:bottom-20 lg:h-16 lg:text-6xl lg:bottom-20 lg:pt-1 xl:h-20 xl:text-7xl xl:bottom-24"
         >
           <span className="mr-5">Mazagran</span>
           <span className="mr-5 ">
@@ -114,7 +116,7 @@ const Hero = forwardRef((props, ref) => {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }}
           direction="left"
-          className="text-primary -z-10 bg-[#EAE6DE] -rotate-6 select-none absolute 2xs:h-7 2xs:text-xl 2xs:bottom-7 xs:h-8  xs:text-2xl xs:bottom-12 sm:h-10 sm:text-4xl sm:bottom-14 md:h-12 md:text-5xl md:bottom-20 lg:h-16 lg:text-6xl lg:bottom-20 lg:pt-1 xl:h-20 xl:text-7xl xl:bottom-24"
+          className="text-primary -z-10 bg-main select-none absolute 2xs:h-7 2xs:text-xl 2xs:bottom-7 xs:h-8  xs:text-2xl xs:bottom-12 sm:h-10 sm:text-4xl sm:bottom-14 md:h-12 md:text-5xl md:bottom-20 lg:h-16 lg:text-6xl lg:bottom-20 lg:pt-1 xl:h-20 xl:text-7xl xl:bottom-24"
         >
           <span className="mr-5">Spanish Latte</span>
           <span className="mr-5 ">

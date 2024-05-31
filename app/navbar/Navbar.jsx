@@ -83,12 +83,41 @@ export default function Navbar({ onclickAbout, onclickHero, onclickMenu }) {
                     style={{ cursor: "default" }}
                   >
                     <div className="modal-box bg-main">
-                      <h3 className="font-bold 2xs:text-xl xs:text-3xl">About the Group</h3>
-                      <div className="pt-4 2xs:text-sm xs:text-lg font-semibold">
-                        <p>NATHANIEL GATPANDAN</p>
-                        <p>CYRIL JUSTINE MALTO</p>
-                        <p>JANE THERESE RICAFORT</p>
-                        <p>BRIAN SIERRA</p>
+                      <div className="mb-2">
+                        <h3 className="font-bold 2xs:text-xl xs:text-3xl">
+                          About the Group
+                        </h3>
+                        <div className="2xs:text-sm xs:text-lg font-semibold">
+                          <p>NATHANIEL GATPANDAN</p>
+                          <p>CYRIL JUSTINE MALTO</p>
+                          <p>JANE THERESE RICAFORT</p>
+                          <p>BRIAN SIERRA</p>
+                        </div>
+                      </div>
+                      <div>
+                        <h3 className="font-bold 2xs:text-xl xs:text-2xl">
+                          References
+                        </h3>
+                        <div className="2xs:text-sm xs:text-lg font-semibold">
+                          <div>
+                            <a
+                              className="underline"
+                              href="https://www.behance.net/gallery/191075703/Renaissance-Coffee-Shop-Website-Design"
+                              target="_blank"
+                            >
+                              Renaissance Coffee Shop Website Design
+                            </a>
+                          </div>
+                          <div>
+                            <a
+                              className="underline "
+                              href="https://dribbble.com/shots/21377033-Kaff-Coffee-Shop-Landing-Page-Website"
+                              target="_blank"
+                            >
+                              Kaff - Coffee Shop Landing Page Website
+                            </a>
+                          </div>
+                        </div>
                       </div>
                       <div className="modal-action">
                         <form method="dialog" className="w-full">
