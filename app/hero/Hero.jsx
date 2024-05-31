@@ -18,10 +18,10 @@ const coffee =
 
 const Hero = forwardRef((props, ref) => {
   const twoxlAndXl = useMediaQuery({ minWidth: 1280 });
-  const large = useMediaQuery({ minWidth: 1024 });
-  const medium = useMediaQuery({ minWidth: 768 });
-  const small = useMediaQuery({ minWidth: 640 });
-  const xs = useMediaQuery({ minWidth: 450 });
+  const large = useMediaQuery({ minWidth: 1024, maxWidth: 1279 });
+  const medium = useMediaQuery({ minWidth: 768, maxWidth: 1023 });
+  const small = useMediaQuery({ minWidth: 640, maxWidth: 767 });
+  const xs = useMediaQuery({ minWidth: 450, maxWidth: 639 });
 
   const [coffeeSize, setCoffeeSize] = useState(569);
   const [circleSize, setCircleSize] = useState(456);
