@@ -11,12 +11,13 @@ const cinzel_dec = Cinzel_Decorative({
 
 function Advertisement() {
   return (
-    <section className="grid grid-cols-12 mt-20">
+    <motion.section
+    initial={{ y: 100, opacity: 0 }}
+    whileInView={{ y: 0, opacity: 1 }}
+    transition={{ duration: 1 }}
+     className="grid grid-cols-12 mt-20">
       <div className="2xs:col-span-12 md:col-span-6 2xs:mt-5 lg:mt-10 xl:mt-20">
-        <motion.div
-          initial={{ y: 100, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1 }}
+        <div
           className="select-none text-primary 2xs:text-xs sm:text-sm md:text-sm tracking-wide xl:leading-relaxed 2xl:leading-relaxed 2xs:px-8 lg:px-24 xl:px-44"
         >
           <div className="w-max float-left sm:text-xs text-right font-bold rotate-12">
@@ -32,13 +33,10 @@ function Advertisement() {
               className="aspect-square rounded object-cover 2xs:h-[200px] 2xs:w-[200px] xs:h-[300px] xs:w-[300px] xl:h-[400px] xl:w-[400px]"
             />
           </div>
-        </motion.div>
+        </div>
       </div>
       <div className="2xs:col-span-12 md:col-span-6 2xs:mt-10 xl:mt-20">
-        <motion.p
-          initial={{ y: 100, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1 }}
+        <div
           className="text-primary 2xs:mx-10 sm:mx-8"
         >
           <div className="2xs:mb-3">
@@ -74,9 +72,9 @@ function Advertisement() {
               for an unforgettable journey into the world of artisanal coffee.
             </div>
           </div>
-        </motion.p>
+        </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
 
