@@ -4,6 +4,7 @@ import { useRef } from "react";
 import Navbar from "./navbar/Navbar";
 import Hero from "./hero/Hero";
 import About from "./about/About";
+import Advertisement from "./advertisement/Advertisement";
 import Menu from "./menu/Menu";
 
 export default function Home() {
@@ -30,6 +31,7 @@ export default function Home() {
         onclickMenu={() => scrollToSection(menu)}
       />
       <Hero ref={hero} />
+      <Advertisement />
       <About ref={about} />
       <Menu ref={menu} />
     </main>
