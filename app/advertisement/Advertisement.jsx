@@ -24,6 +24,7 @@ function Advertisement() {
             <Image
               src={woman_drinking}
               className="aspect-square rounded object-cover 2xs:h-[200px] 2xs:w-[200px] xs:h-[250px] xs:w-[250px] sm:h-[300px] sm:w-[300px] md:h-[200px] md:w-[200px] xl:h-[250px] xl:w-[250px]"
+              alt="Woman Drinking"
             />
           </div>
           <div className="2xs:mt-6 xs:mt-8 sm:relative sm:bottom-28 md:bottom-0 w-max md:left-4 lg:left-20 xl:left-36 float-right sm:text-xs lg:text-base lg:bottom-5 xl:bottom-2 text-right font-bold -rotate-6">
@@ -31,6 +32,7 @@ function Advertisement() {
             <Image
               src={coffees}
               className="aspect-square rounded object-cover 2xs:h-[200px] 2xs:w-[200px] xs:h-[300px] xs:w-[300px] xl:h-[400px] xl:w-[400px]"
+              alt="Coffees"
             />
           </div>
         </div>

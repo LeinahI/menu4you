@@ -56,7 +56,7 @@ export default function Navbar({ onclickAbout, onclickHero, onclickMenu }) {
       <div className="navbar-center mx-auto">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <details className="dropdown ">
+            {/* <details className="dropdown ">
               <summary className="btn btn-ghost text-xl">About</summary>
               <ul className="p-2 z-50 bg-main">
                 <li>
@@ -68,7 +68,6 @@ export default function Navbar({ onclickAbout, onclickHero, onclickMenu }) {
                   </a>
                 </li>
                 <li>
-                  {/* Open the modal using document.getElementById('ID').showModal() method */}
                   <button
                     className="btn btn-ghost text-base"
                     onClick={() =>
@@ -121,7 +120,6 @@ export default function Navbar({ onclickAbout, onclickHero, onclickMenu }) {
                       </div>
                       <div className="modal-action">
                         <form method="dialog" className="w-full">
-                          {/* if there is a button in form, it will close the modal */}
                           <button className="btn w-full">Close</button>
                         </form>
                       </div>
@@ -129,7 +127,13 @@ export default function Navbar({ onclickAbout, onclickHero, onclickMenu }) {
                   </dialog>
                 </li>
               </ul>
-            </details>
+            </details> */}
+            <a
+              onClick={() => onclickAbout()}
+              className="btn btn-ghost text-xl"
+            >
+              About Us
+            </a>
           </li>
           <li>
             <a onClick={() => onclickHero()} className="btn btn-ghost">

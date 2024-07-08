@@ -132,7 +132,7 @@ const Menu = forwardRef((props, ref) => {
           transition={{ duration: 1 }}
           className="col-span-12 2xs:mt-3 xs:mt-6 2xs:px-10 md:px-14 mb-14"
         >
-          <div class="flex flex-col w-full text-primary">
+          <div className="flex flex-col w-full text-primary">
             {MenuList.map((item) => (
               <div key={item.id}>
                 <div className="collapse overflow-visible grid text-center 2xs:text-lg xs:text-xl sm:text-3xl md:text-4xl lg:text-5xl place-items-center">
@@ -165,10 +165,10 @@ const Menu = forwardRef((props, ref) => {
                         >
                           <Image
                             src={item.image}
-                            className="absolute"
+                            className="absolute -z-10"
                             height={heiggtImage[item.id]}
                             width={widthImage[item.id]}
-                            class="-z-10"
+                            alt="Best Seller"
                           />
                         </motion.div>
                       )}
@@ -191,6 +191,7 @@ const Menu = forwardRef((props, ref) => {
                                 height={486}
                                 width={486}
                                 className="aspect-square rounded object-cover"
+                                alt="Products"
                               />
                               <div className="mt-3 text-start">
                                 <h3 className="font-medium 2xs:text-base sm:text-xl lg:text-2xl text-primary">

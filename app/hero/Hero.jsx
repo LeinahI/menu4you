@@ -85,7 +85,7 @@ const Hero = forwardRef((props, ref) => {
           <div className="flex justify-center">
             <Image
               src={Circle}
-              alt="Spanish Latte"
+              alt="Dark Circle"
               className="select-none -z-20 absolute bottom-0"
               height={circleSize}
               width={circleSize}
@@ -134,10 +134,10 @@ const Hero = forwardRef((props, ref) => {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1 }}
-        class="grid grid-cols-12"
+        className="grid grid-cols-12"
       >
-        <div class="2xs:col-span-12 sm:col-span-6 sm:col-end-13 lg:col-span-4 lg:col-end-13 xl:col-span-4 xl:col-end-13 card bg-base-100">
-          <div class="card-body 2xs:text-xs md:text-base lg:absolute lg:bottom-44 xl:bottom-64">
+        <div className="2xs:col-span-12 sm:col-span-6 sm:col-end-13 lg:col-span-4 lg:col-end-13 xl:col-span-4 xl:col-end-13 card bg-base-100">
+          <div className="card-body 2xs:text-xs md:text-base lg:absolute lg:bottom-44 xl:bottom-64">
             <p className="text-primary text-right">
               Come in and see where every cup is a masterpiece of flavor. Enjoy
               our meticulously crafted coffees, from bold richness to velvety
